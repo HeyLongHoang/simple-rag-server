@@ -21,7 +21,7 @@ A FastAPI-based application that provides vector search capabilities using Llama
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd index_llama-index_fastapi
+cd simple-rag-server
 ```
 
 2. Create a virtual environment and activate it:
@@ -51,13 +51,13 @@ STORAGE_DIR=./storage
 ### Development Mode
 
 ```bash
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uv run fastapi dev app/main.py
 ```
 
 ### Production Mode
 
 ```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000
+uv run fastapi run app/main.py
 ```
 
 The API will be available at `http://localhost:8000`
